@@ -1,5 +1,6 @@
 using AspireApp.Web;
 using AspireApp.Web.Components;
+using Blazored.Toast;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddOutputCache();
+builder.Services.AddBlazoredToast();
 
 builder.Services.AddHttpClient<ApiClient>(client =>
     {
